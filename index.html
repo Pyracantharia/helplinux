@@ -1,114 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Commandes Linux</h1>
- echo * vs tree
-<br>
-## >mkdir -p -m
-permet de créer un dossier et ses sous-dossiers
--p permet de créer le repertoire parent si il n'existe pas
--m permet de donner les droits au dossier
-<br>
-## rm et rmdir
-rm permet de supprimer un fichier,
-rmdir permet de supprimer un dossier vide
-<br>
-## mv 
-mv permet de déplacer un fichier ou un dossier
-mv permet de renommer un fichier ou un dossier
-<br>
-## cp
-cp permet de copier un fichier ou un dossier
-<br>
-## ln
-ln permet de créer un lien symbolique
-<br>
-chown permet de changer le propriétaire d'un fichier ou d'un dossier
-chmod permet de changer les droits d'un fichier ou d'un dossier
-<br>
-## netsat -laput
-afficher les informations sur les connexions réseau, les tables de routage, les statistiques sur l'utilisation des interfaces et les machine distante .
-<br>
-## ifconfig
-afficher les informations sur les interfaces réseau
-<br>
-## nmap
-afficher les ports ouverts sur une machine distante
-<br>
-## traceroute
-suivre le cehmin qun paquet prend pour arriver à destination
+    echo * vs tree
+    <br />
+    ## >mkdir -p -m permet de créer un dossier et ses sous-dossiers -p permet de
+    créer le repertoire parent si il n'existe pas -m permet de donner les droits
+    au dossier
+    <br />
+    ## rm et rmdir rm permet de supprimer un fichier, rmdir permet de supprimer
+    un dossier vide
+    <br />
+    ## mv mv permet de déplacer un fichier ou un dossier mv permet de renommer
+    un fichier ou un dossier
+    <br />
+    ## cp cp permet de copier un fichier ou un dossier
+    <br />
+    ## ln ln permet de créer un lien symbolique
+    <br />
+    chown permet de changer le propriétaire d'un fichier ou d'un dossier chmod
+    permet de changer les droits d'un fichier ou d'un dossier
+    <br />
+    ## netsat -laput afficher les informations sur les connexions réseau, les
+    tables de routage, les statistiques sur l'utilisation des interfaces et les
+    machine distante .
+    <br />
+    ## ifconfig afficher les informations sur les interfaces réseau
+    <br />
+    ## nmap afficher les ports ouverts sur une machine distante
+    <br />
+    ## traceroute suivre le cehmin qun paquet prend pour arriver à destination
 
+    <br />
+    ## ping tester la connexion avec une machine distante
+    <br />
+    arp permet de voir les adresses MAC des machines du réseau local
+    <br />
+    nslookup permet de faire des requêtes DNS
 
-<br>
-## ping
-tester la connexion avec une machine distante
-<br>
-arp permet de voir les adresses MAC des machines du réseau local
-<br>
-nslookup permet de faire des requêtes DNS 
+    <br />
+    for i in {1..5} do echo "Élément : $i" done
+    <br />
 
-<br>
-for i in {1..5}
-do
-    echo "Élément : $i"
-done
-<br>
-  
-
-
-
-counter=1
-
-while [ $counter -le 5 ]
-do
-    echo "Compteur : $counter"
-    ((counter++))
-done
-<br>
-la command cut permet de couper un fichier en plusieurs parties
-<br>
-la commande grep permet de rechercher une chaine de caractère dans un fichier
-<br>
-zip permet de compresser un fichier
-<br> 
-unzip permet de décompresser un fichier
-<br>
-du permet de connaitre l'espace disque utilisé par un fichier ou un dossier
-<br>
-tar permet de compresser un fichier ou un dossier
-
-   zip ouai.tar ouai/
-<br>
-    <br>
-    <br>
-    Utilisez awk pour extraire une colonne spécifique du fichier. Par exemple, si le fichier a des colonnes séparées par des espaces et que vous voulez extraire la deuxième colonne :
-    <br>
+    counter=1 while [ $counter -le 5 ] do echo "Compteur : $counter"
+    ((counter++)) done
+    <br />
+    la command cut permet de couper un fichier en plusieurs parties
+    <br />
+    la commande grep permet de rechercher une chaine de caractère dans un
+    fichier
+    <br />
+    zip permet de compresser un fichier
+    <br />
+    unzip permet de décompresser un fichier
+    <br />
+    du permet de connaitre l'espace disque utilisé par un fichier ou un dossier
+    <br />
+    tar permet de compresser un fichier ou un dossier zip ouai.tar ouai/
+    <br />
+    <br />
+    <br />
+    Utilisez awk pour extraire une colonne spécifique du fichier. Par exemple,
+    si le fichier a des colonnes séparées par des espaces et que vous voulez
+    extraire la deuxième colonne :
+    <br />
     awk '{print $2}' exemple.txt
 
-    <br>
-    #!/bin/bash
+    <br />
+    #!/bin/bash # Ceci est un script Bash simple echo "Bonjour, monde !"
+    <br />
+    Utilisez grep pour filtrer les lignes du fichier qui contiennent un mot
+    spécifique. Par exemple, affichez les lignes contenant "banana" : grep
+    'banana' exemple.txt
 
-# Ceci est un script Bash simple
-echo "Bonjour, monde !"
-    <br>
-    Utilisez grep pour filtrer les lignes du fichier qui contiennent un mot spécifique. Par exemple, affichez les lignes contenant "banana" :
+    <br />
 
-    grep 'banana' exemple.txt
-    
-    <br>
-    
     date -d "2022-01-25" +"%A, %B %d, %Y"
 
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
+    <h1>EXO Corrigé</h1>
 
+    <br />
+    Exercices Linux (Globbing/File system) Exercice 1
+    <br />
+    <br />
+    <br />
 
-</body>
+    (libre) Créer un dossier test contenant trois fichiers test1 toto titi
 
+    <br />
+    mkdir test touch test/test1 test/toto test/titi
+
+    <br />
+    <br />
+    Exercice 2
+
+    <br />
+    (libre) Créer un dossier test2 contenant un dossier test21 et test22, le
+    dossier test21 doit contenir un dossier test211 contenant lui-même un
+    fichier test211-1
+    <br />
+    mkdir -p test2/test21/test211 test2/test22 touch
+    test2/test21/test211/test211-1
+    <br />
+    Exercice 3
+    <br />
+    Même question 1 mais en 2 lignes de commandes (voir 1 ligne)
+    <br />
+    mkdir test && touch test/{test1,toto,titi}
+    <br />
+    Exercice 4
+    <br />
+    Même question 2 mais en 2 lignes de commandes (voir 1 ligne)
+    <br />
+    mkdir -p test2/test2{1/test211,2} && touch test2/test21/test211/test211-1
+    <br />
+    Exercice 5
+    <br />
+    Créer une arborescence dans un dossier test3 contenant 100 dossiers nommés
+    xxx-test contenant eux-mêmes 50 sous-dossiers nommés "xxx subtest"
+    <br />
+    mkdir -p test3/{00..99}-test/{00..49}\ subtest
+  </body>
 </html>
