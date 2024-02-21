@@ -28,3 +28,9 @@ while true; do
 
     case $choix in
 
+ 1) ajouter_contact ;;
+        2) supprimer_contact ;;
+        3) break ;;
+        *) echo "Option invalide. Veuillez r  essayer."
+ ;;
+    esac
