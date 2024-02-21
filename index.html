@@ -1,78 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Commandes Linux</h1>
- echo * vs tree
-<br>
-## >mkdir -p -m
-permet de créer un dossier et ses sous-dossiers
--p permet de créer le repertoire parent si il n'existe pas
--m permet de donner les droits au dossier
-<br>
-## rm et rmdir
-rm permet de supprimer un fichier,
-rmdir permet de supprimer un dossier vide
-<br>
-## mv 
-mv permet de déplacer un fichier ou un dossier
-mv permet de renommer un fichier ou un dossier
-<br>
-## cp
-cp permet de copier un fichier ou un dossier
-<br>
-## ln
-ln permet de créer un lien symbolique
-<br>
-chown permet de changer le propriétaire d'un fichier ou d'un dossier
-chmod permet de changer les droits d'un fichier ou d'un dossier
-<br>
-## netsat -laput
-afficher les informations sur les connexions réseau, les tables de routage, les statistiques sur l'utilisation des interfaces et les machine distante .
-<br>
-## ifconfig
-afficher les informations sur les interfaces réseau
-<br>
-## nmap
-afficher les ports ouverts sur une machine distante
-<br>
-## traceroute
-suivre le cehmin qun paquet prend pour arriver à destination
+    echo * vs tree
+    <br />
+    ## >mkdir -p -m permet de créer un dossier et ses sous-dossiers -p permet de
+    créer le repertoire parent si il n'existe pas -m permet de donner les droits
+    au dossier
+    <br />
+    ## rm et rmdir rm permet de supprimer un fichier, rmdir permet de supprimer
+    un dossier vide
+    <br />
+    ## mv mv permet de déplacer un fichier ou un dossier mv permet de renommer
+    un fichier ou un dossier
+    <br />
+    ## cp cp permet de copier un fichier ou un dossier
+    <br />
+    ## ln ln permet de créer un lien symbolique
+    <br />
+    chown permet de changer le propriétaire d'un fichier ou d'un dossier chmod
+    permet de changer les droits d'un fichier ou d'un dossier
+    <br />
+    ## netsat -laput afficher les informations sur les connexions réseau, les
+    tables de routage, les statistiques sur l'utilisation des interfaces et les
+    machine distante .
+    <br />
+    ## ifconfig afficher les informations sur les interfaces réseau
+    <br />
+    ## nmap afficher les ports ouverts sur une machine distante
+    <br />
+    ## traceroute suivre le cehmin qun paquet prend pour arriver à destination
+
+    <br />
+    ## ping tester la connexion avec une machine distante
+    <br />
+    arp permet de voir les adresses MAC des machines du réseau local
+    <br />
+    nslookup permet de faire des requêtes DNS
+
+    <br />
+    for i in {1..5} do echo "Élément : $i" done
+    <br />
+
+    counter=1 while [ $counter -le 5 ] do echo "Compteur : $counter"
+    ((counter++)) done
+    <br />
+    la command cut permet de couper un fichier en plusieurs parties
+    <br />
+    la commande grep permet de rechercher une chaine de caractère dans un
+    fichier
+    <br />
+    zip permet de compresser un fichier
+    <br />
+    unzip permet de décompresser un fichier
+    <br />
+    du permet de connaitre l'espace disque utilisé par un fichier ou un dossier
+    <br />
+    tar permet de compresser un fichier ou un dossier zip ouai.tar ouai/
+    <br />
+    <br />
+    <br />
+    Utilisez awk pour extraire une colonne spécifique du fichier. Par exemple,
+    si le fichier a des colonnes séparées par des espaces et que vous voulez
+    extraire la deuxième colonne :
+    <br />
+    awk '{print $2}' exemple.txt
+
+    <br />
+    #!/bin/bash # Ceci est un script Bash simple echo "Bonjour, monde !"
+    <br />
+    Utilisez grep pour filtrer les lignes du fichier qui contiennent un mot
+    spécifique. Par exemple, affichez les lignes contenant "banana" : grep
+    'banana' exemple.txt
+
+    <br />
+
+    date -d "2022-01-25" +"%A, %B %d, %Y"
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <h1>EXO Corrigé</h1>
+
+    <br />
+    Exercices Linux (Globbing/File system) Exercice 1
+    <br />
+    <br />
+    <br />
+
+    (libre) Créer un dossier test contenant trois fichiers test1 toto titi
+
+    <br />
+    mkdir test touch test/test1 test/toto test/titi
+
+    <br />
+    <br />
+    Exercice 2
+
+    <br />
+    (libre) Créer un dossier test2 contenant un dossier test21 et test22, le
+    dossier test21 doit contenir un dossier test211 contenant lui-même un
+    fichier test211-1
+    <br />
+    mkdir -p test2/test21/test211 test2/test22 touch
+    test2/test21/test211/test211-1
+    <br />
+    Exercice 3
+    <br />
+    Même question 1 mais en 2 lignes de commandes (voir 1 ligne)
+    <br />
+    mkdir test && touch test/{test1,toto,titi}
+    <br />
+    Exercice 4
+    <br />
+    Même question 2 mais en 2 lignes de commandes (voir 1 ligne)
+    <br />
+    mkdir -p test2/test2{1/test211,2} && touch test2/test21/test211/test211-1
+    <br />
+    Exercice 5
+    <br />
+    Créer une arborescence dans un dossier test3 contenant 100 dossiers nommés
+    xxx-test contenant eux-mêmes 50 sous-dossiers nommés "xxx subtest"
+    <br />
+    mkdir -p test3/{00..99}-test/{00..49}\ subtest
 
 
-<br>
-## ping
-tester la connexion avec une machine distante
-<br>
-arp permet de voir les adresses MAC des machines du réseau local
-<br>
-nslookup permet de faire des requêtes DNS 
 
-<br>
-for i in {1..5}
-do
-    echo "Élément : $i"
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            white-space: pre;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<pre>
+
+  <h1>Backup.sh</h1>
+#! /bin/bash
+
+DESTINATION=`pwd`
+BACKUP_DIR=$1
+if [ $# -gt 1 ]; then
+    DESTINATION=$2
+    BACKUP_DIR=$3
+fi
+REAL_DESTINATION=`cd $DESTINATION; pwd`
+
+DIRNAME=${BACKUP_DIR##*/}
+BACKUP_NAME=`date +%Y-%m-%d`_$DIRNAME
+TEMP_DIR=/tmp/$BACKUP_NAME
+
+if [ -d $TEMP_DIR ]; then
+    rm -rf $TEMP_DIR
+fi
+mkdir $TEMP_DIR
+
+list=`du -Ah $BACKUP_DIR/*`
+IFS=$'\n'
+for i in $list; do
+    filename=`echo $i | cut -f 2`
+    weight=`echo $i | cut -f 1`
+    echo `basename $filename` $weight >> $TEMP_DIR/list.txt
+    echo ${filename##*/} $weight >> $TEMP_DIR/list.txt
+done
+cp -R $BACKUP_DIR/* $TEMP_DIR/
+cd $TEMP_DIR/..
+zip -r $BACKUP_NAME.zip $BACKUP_NAME > /dev/null
+
+if [ ! -d $REAL_DESTINATION ]; then
+    mkdir -p $REAL_DESTINATION
+fi
+mv $BACKUP_NAME.zip $REAL_DESTINATION
+echo -n $BACKUP_NAME.zip backed up
+if [ $# -gt 1 ]; then
+    echo " in $DESTINATION"
+else
+    echo " here"
+fi
+rm -rf $TEMP_DIR
+</pre>
+
+
+<br><br><br>
+<pre>
+  <h1>test.sh</h1>
+  #! /bin/bash
+
+# my comment
+echo "Hello world"
+
+VAR1="toto"
+VAR2=titi
+VARI=0
+VARI=$(($VARI+1))
+
+# toto tuti tutu 1L 0L
+echo "$VAR1 ${VAR2/i/u} ${VAR2//i/u} ${VARI}L ${VARII=0}L"
+
+MY_ARRAY=(0 1 "titi")
+echo ${MY_ARRAY[@]}
+declare -A ASSOC_ARRAY
+ASSOC_ARRAY[titi]=tutu
+echo ${ASSOC_ARRAY[@]}
+
+echo $0 $1
+echo $$" : Current PID"
+
+#tree / > /dev/null &
+#echo $!" : PID of tree"
+
+## Subshell
+CT_LIST1=$(docker ps -q)
+CT_LIST2=`docker ps -q`
+
+echo $CT_LIST1 "**" $CT_LIST2
+
+## Conditional Structure
+## Test
+test -e ./test.sh
+echo $?
+test $VAR2 = "titi"
+echo $?
+test $VARI -eq 1
+echo $?
+
+# Structure
+if [ "$1" -eq 1 ]; then
+    echo "\$1 vaut 1"
+elif [ "$1" -lt 5 ]; then
+    echo "\$1 < 5"
+else
+    echo "\$1 >= 5"
+fi
+
+case "$2" in
+    1) echo "\$2 vaut 1" ;;
+    10) echo "\$2 vaut 10" ;;
+    *) echo "\$2 vaut $2" ;;
+esac
+
+[ -e ./test2.sh ] && echo "File exists" || echo "File not exists"
+
+## Structure itérative
+echo "For/in"
+echo " - Array"
+for value in ${MY_ARRAY[@]}; do
+    echo $value
 done
 <br>
-
-
-counter=1
-
-while [ $counter -le 5 ]
-do
-    echo "Compteur : $counter"
-    ((counter++))
-done
-<br>
-
-
-
 la command cut permet de couper un fichier en plusieurs parties
 <br>
 la commande grep permet de rechercher une chaine de caractère dans un fichier
@@ -84,15 +272,7 @@ unzip permet de décompresser un fichier
 du permet de connaitre l'espace disque utilisé par un fichier ou un dossier
 <br>
 tar permet de compresser un fichier ou un dossier
-<br>
-awk permet de manipuler des fichiers texte
-<br>
-du -sh * permet de connaitre l'espace disque utilisé par un fichier ou un dossier
-<br>
-du -Ah * permet de connaitre l'espace disque utilisé par un fichier ou un dossier humainement
-<br>
-echo -n permet de ne pas faire de retour à la ligne
+
 
 </body>
-
 </html>
